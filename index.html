@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>معمل الفيزياء التفاعلي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dial-bg" aria-hidden="true"></div>
+
+<header class="topbar" id="topbar">
+  <button class="brand" data-nav="home" aria-label="الصفحة الرئيسية">
+    <span class="brand-mark">
+      <svg viewBox="0 0 40 40" width="30" height="30" fill="none">
+        <circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="2"/>
+        <path d="M20 6 V12 M20 28 V34 M6 20 H12 M28 20 H34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="4" fill="currentColor"/>
+      </svg>
+    </span>
+    <span class="brand-text">
+      <strong>معمل الفيزياء</strong>
+      <em>Interactive Physics Lab</em>
+    </span>
+  </button>
+
+  <nav class="topnav">
+    <button data-nav="home">الرئيسية</button>
+    <button data-nav="map">خريطة المادة</button>
+    <button data-nav="mistakes">أخطائي</button>
+    <button data-nav="progress">تقدّمي</button>
+  </nav>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="القائمة">
+    <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+</header>
+
+<main id="app" class="app" tabindex="-1"></main>
+
+<footer class="foot">
+  <span>تقدّمك محفوظ تلقائيًا على هذا الجهاز</span>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="js/core.js"></script>
+<script src="js/lesson-measurement.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => PL.init());
+</script>
+</body>
+</html>
